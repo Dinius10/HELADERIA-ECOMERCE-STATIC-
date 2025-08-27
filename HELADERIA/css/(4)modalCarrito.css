@@ -1,0 +1,304 @@
+.modal {
+  border-radius: 0.75rem;
+  box-shadow: rgba(149, 157, 165, 1) 0px 8px 24px;
+  max-width: 100rem;
+  max-height: 80vh;
+  min-width: 20rem;
+  border: none;
+  background-color: #FFF8E3;
+  padding: 40px 20px;
+
+  /* Centrar el modal */
+  position: fixed;
+  /* Posicionamiento fijo */
+  top: 50%;
+  /* Posicionamiento vertical */
+  left: 50%;
+  /* Posicionamiento horizontal */
+  transform: translate(-50%, -50%);
+  /* Ajusta la posición para centrar */
+  z-index: 1050;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Fondo fuera del modal */
+}
+
+.modal header {
+  display: flex;
+  min-height: 4rem;
+  padding: 1.5rem 2rem 0.75rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F3F3F4;
+}
+
+.modal h2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #E6A4B4;
+  margin-bottom: 20px;
+  font-family: "Libre Bodoni", serif;
+  font-size: 2rem;
+}
+
+.cerrar-modal {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #E6A4B4;
+  cursor: pointer;
+}
+
+.contenido_carrito {
+  display: flex;
+  gap: 20px;
+}
+
+/*--------------- TABLA --------------------------------------*/
+.productos{
+ max-height: 1000px;
+ overflow-y: auto;
+}
+table {
+  max-width: fit-content;
+  border-collapse: collapse;
+}
+
+thead {
+  position: sticky; 
+  top: 0 ;
+  z-index: 100;
+  text-align: center;
+  border-bottom: 2px solid #E6A4B4;
+}
+
+thead th {
+  padding: .5rem 1rem;
+  font-size: 0.875rem;
+  color: #E6A4B4;
+}
+
+tbody tr {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: #E6A4B4;
+}
+
+tbody td {
+  padding: 1px 1rem;
+  vertical-align: middle;
+  border-bottom: 2px solid #E6A4B4;
+}
+
+/*CAMPOS TABLA*/
+.campo_img{
+  width: 70px;
+}
+
+.campo_producto{
+  text-align: center;
+  font-weight: 700;
+}
+
+.campo_cantidad{
+  display: flex;
+  color: #FFF8E3;
+  font-weight: 700;
+}
+
+.campo_cantidad_menos,
+.campo_cantidad_numero,
+.campo_cantidad_mas{
+  background-color: #E6A4B4;
+  padding: 5px 12px;
+}
+
+.campo_cantidad_menos{
+  border-radius: 10px 0 0 10px;
+}
+.campo_cantidad_numero{
+  border-right: 1px solid #FFF8E3;
+  border-left: 1px solid #FFF8E3;
+}
+.campo_cantidad_mas{
+  border-radius: 0 10px 10px 0;
+}
+
+.campo_eliminar{
+  width: 30px;
+  height: 30px;
+  background-color: #E6A4B4;
+  border-radius: 50%;
+  border: none;
+  color: #FFF8E3;
+  cursor: pointer;
+}
+/*--------------- CONFIRMAR PAGO -----------------------------*/
+
+.confirmar_pago{
+  background-color: #F3D7CA;
+  width: 220px;
+  color: #E6A4B4;
+}
+
+.confirmar_pago h3{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 2px solid #FFF8E3;
+  font-family: "Libre Bodoni", serif;
+  font-size: 1.3rem;
+}
+
+.confirmar_pago div{
+  border-bottom: 2px solid #FFF8E3;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.confirmar_pago div p{
+  display: flex;
+  gap: 50px;
+}
+
+.confirmar_pago_total{
+  border-bottom: 2px solid #FFF8E3;
+  padding: 20px;
+  display: flex;
+  gap: 70px;
+}
+
+.confirmar_pago_button{
+  width: 220px;
+  border: none;
+  background-color: #E6A4B4;
+  color: #FFF8E3;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.cart-tabla-responsive {
+  display: none;
+}
+ /*Descuento*/
+#discount-section{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: rgba(245, 238, 230, 0.5);
+  border-bottom: none;
+}
+#discount-section input{
+  background-color: #FFF8E3;
+  color: #E6A4B4;
+  border: 1px solid #E6A4B4;
+  text-align: center;
+}
+#discount-section input:focus{
+  border-color: #E6A4B4;
+  box-shadow: 0 0 5px rgba(230, 164, 180, 0.5); 
+  outline: none;
+}
+
+#discount-section button{
+  cursor: pointer;
+  background-color: #E6A4B4;
+  color: #FFF8E3;
+  border: none;
+}
+
+/*----------------------- RESPONSIVE TABLET-----------------------*/
+@media only screen and (max-width: 900px) {
+  .contenido_carrito {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*----------------------- RESPONSIVE MOVILE-----------------------*/
+@media only screen and (max-width: 450px) {
+  .tabla{
+    display: none;
+  }
+  .modal h2 {
+    font-size: 1.5rem;
+  }
+  .productos{
+    overflow-y: auto;
+    
+  }
+  
+  .cart-tabla-responsive {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    border: 2px solid #E6A4B4;
+    border-radius: 10px;
+    color: #E6A4B4;
+    
+  }
+  .dato-foto {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid #E6A4B4;
+  }
+  .dato {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid #E6A4B4;
+  }
+  .dato span {
+    width: 40%;
+    font-weight: bold;
+    color: #c98999;
+    overflow-x: auto;
+    /* Ocultar scrollbar en otros navegadores (Firefox) */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+  }
+  
+  /* Ocultar scrollbar en navegadores basados en WebKit (Chrome, Safari) */
+  .dato span::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .dato p {
+    width: 60%;
+    margin-left: 10px;
+    overflow-x: auto;
+    /* Ocultar scrollbar en otros navegadores (Firefox) */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+  }
+  
+  /* Ocultar scrollbar en navegadores basados en WebKit (Chrome, Safari) */
+  .dato p::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tabla-botones {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+}

@@ -1,0 +1,10 @@
+/*ANIMACION AL AÑADIR PRODUCTO AL CARRITO*/
+.bala {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #E6A4B4;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.5s linear;
+}

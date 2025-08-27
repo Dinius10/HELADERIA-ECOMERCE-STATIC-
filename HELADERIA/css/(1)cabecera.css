@@ -1,0 +1,148 @@
+.cabecera {
+  width: 100vw;
+  height: 15vh;
+  background-color: #E6A4B4;
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.carrito {
+  width: 33.3%;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 30px;
+  font-size: 2rem;
+  color: #FFF8E3;
+  cursor: pointer;
+}
+
+.logo {
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo1 {
+  height: 100%;
+}
+.logo2 {
+  display: none;
+}
+
+.botones_cabecera {
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.boton_cabecera {
+  background-color: #FFF8E3;
+  border-radius: 50%;
+  width: 95px;
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.boton_cabecera p {
+  text-align: center;
+  color: #E6A4B4;
+}
+
+.boton_cabecera img {
+  width: 90px;
+  position: absolute;
+  bottom: -50%;
+}
+
+#navbar {
+  display: none;
+}
+
+#cerrar_nav {
+  display: none;
+}
+
+/*----------------------- RESPONSIVE -----------------------*/
+@media only screen and (max-width: 1090px) {
+  #cerrar_nav {
+    width: 25px;
+    cursor: pointer;
+  }
+
+  #navbar {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .cabecera {
+    position: relative;
+    justify-content: flex-start;
+  }
+
+  .carrito {
+    position: absolute;
+    right: 80px;
+    height: 100%;
+    font-size: 1.5rem;
+    width: 90px;
+  }
+
+  .logo{
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .logo1 {
+    display: none;
+  }
+  .logo2 {
+    display: block;
+    height: 80%;
+  }
+
+  .botones_cabecera {
+    width: 100px;
+    flex-direction: column;
+    position: absolute;
+    z-index: 999;
+    gap: 40px;
+    right: 5px;
+    top: 40%;
+  }
+
+  .boton_cabecera {
+    transform: translateY(-600%);
+    animation: xxxx .7s forwards;
+  }
+
+  @keyframes abrirMenuResponsive {
+    from {
+      transform: translateY(-600%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes cerrarMenuResponsive {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(-600%);
+    }
+  }
+
+}

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ESTILOS CSS -->
+  <link rel="stylesheet" href="css/(0)styles.css">
+  <link rel="stylesheet" href="css/(1)cabecera.css">
+  <link rel="stylesheet" href="css/(2)contenido.css">
+  <link rel="stylesheet" href="css/(3)footer.css">
+  <link rel="stylesheet" href="css/(4)modalCarrito.css">
+  <link rel="stylesheet" href="css/(5)pedidoEntrega.css">
+  <link rel="stylesheet" href="css/animaciones.css">
+  <!-- FUENTES DE TEXTO -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Special+Elite&family=Teachers:ital,wght@0,400..800;1,400..800&family=Varela+Round&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e077a1619a.js" crossorigin="anonymous"></script>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  
+  <title>HELADERÍA 1</title>
+  <link rel="shortcut icon" href="img/icono.png" type="image/x-icon">
+</head>
+
+<body>
+  <section class="contenedor">
+    <!--------------------CABECERA-------------------->
+    <div class="cabecera">
+      <div class="carrito abrir-modal" data-modal="modal-carrito" id="boton2">
+        <span id="cart-count">0</span>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+
+      <div class="logo">
+        <img class="logo1" src="img/LOGO.png" alt="">
+        <img class="logo2" src="img/logo_responsive2.png" alt="">
+      </div>
+
+      <div class="botones_cabecera">
+        <img src="img/nav.png" alt="logo" id="navbar">
+        <img src="img/equis.png" alt="logo" id="cerrar_nav">
+
+        <div class="boton_cabecera">
+          <p>Super<br>Promos</p>
+          <img src="img/derretido_circulo.png" alt="">
+        </div>
+        <div class="boton_cabecera">
+          <p>Super<br>Promos</p>
+          <img src="img/derretido_circulo.png" alt="">
+        </div>
+        <div class="boton_cabecera">
+          <p>Super<br>Promos</p>
+          <img src="img/derretido_circulo.png" alt="">
+        </div>
+
+      </div>
+
+    </div>
+    <!--------------------END CABECERA-------------------->
+
+    <!--------------------CONTENIDO-------------------->
+    <div class="contenido " id="products">
+
+      <div class="info">
+        <div class="title">
+          <p>HELADO<br>DULCE DE LECHE</p>
+        </div>
+        <div class="description">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto porro debitis sunt voluptas
+            ducimus dicta corrupti quos ipsa laboriosam commodi quae a similique sequi sapiente culpa molestiae, nulla
+            ea?
+          </p>
+        </div>
+        <div class="price">
+          <button id="boton1" class=" btn_anadir_carrito" data-id="1" data-name="HELADO DULCE DE LECHE" data-price="49.9"><i
+              class="fa-solid fa-cart-shopping"></i></button>
+          <span>49,9 Bs</span>
+        </div>
+      </div>
+      <div class="imagen_helado">
+        <div class="mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="imagen">
+                <img src="img/HELADO1.png">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="imagen">
+                <img src="img/HELADO2.png">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="imagen">
+                <img src="img/HELADO3.png">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="imagen">
+                <img src="img/HELADO4.png">
+              </div>
+            </div>
+            <!-- ... -->
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+    </div>
+    <!--------------------END CONTENIDO-------------------->
+
+    <!--------------------PIE DE PÁGINA-------------------->
+    <footer class="footer">
+      <div class="iconos_footer">
+        <a href=""><i class="fa-solid fa-location-dot"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </footer>
+    <!--------------------END PIE DE PÁGINA-------------------->
+  </section>
+
+  <!-------------------- CARRITO -------------------->
+  <dialog class="modal" id="modal-carrito">
+    <span class="cerrar-modal-btn cerrar-modal" type="button">X</span>
+    <h2>TU CARRITO <i class="fa-solid fa-cart-shopping"></i></h2>
+    <div class="contenido_carrito">
+      <div class="productos">
+        <table class="tabla">
+          <thead>
+            <tr>
+              <th>FOTO</th>
+              <th>PRODUCTO</th>
+              <th>PRECIO</th>
+              <th>CANTIDAD</th>
+              <th>TOTAL</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cart">
+          </tbody>
+        </table>
+        <div class="contenedor-cart-tabla-responsive" id="cart-responsive">
+        </div>
+      </div>
+      <div class="contenedor_confirmar_pago" id="confirmar_pago">
+      </div>
+
+    </div>
+
+  </dialog>
+  <!-------------------- END CARRITO -------------------->
+  <!-------------------- PEDIDO Y ENTREGA -------------------->
+  <script src="js/swiperPedido.js" defer></script>
+  <dialog class="modal" id="modal-pedido">
+    <span class="cerrar-modal-btn cerrar-modal" type="button">X</span>
+    <div class="container_pedidoEntrega">
+      <h2>PEDIDO</h2>
+      <div class="swiper2">
+        <form action="enviarPedido.php" method="post" id="pedidoForm" class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="container_parte">
+              <div class="parte">
+                <h1>Forma de Entrega</h1>
+                <label class="label-checkbox">
+                  <input class="input-checkbox entrega" type="checkbox" id="delivery" name="delivery" value="delivery">
+                  <span>Delivery</span>
+                </label>
+                <label class="label-checkbox">
+                  <input class="input-checkbox entrega" type="checkbox" id="recojo" name="recojo" value="recojo">
+                  <span>Recojo</span>
+                </label>
+              </div>
+              <div class="parte">
+                <h1>Recibir la Orden</h1>
+                <label class="label-checkbox">
+                  <input class="input-checkbox recibirOrden" type="checkbox" id="ahora" name="ahora" value="ahora">
+                  <span>Ahora mismo</span>
+                </label>
+                <label class="label-checkbox">
+                  <input class="input-checkbox recibirOrden" type="checkbox" id="programar" name="programar"
+                    value="programar">
+                  <span>Programar entrega</span>
+                </label>
+                <!-- Campos adicionales para fecha y hora si se programa la entrega -->
+                <div id="programarEntregaOpciones" style="display: none;">
+                  <div class="input">
+                    <label for="fechaProgramada">Fecha Programada:</label>
+                    <input type="date" id="fechaProgramada" name="fechaProgramada">
+                  </div>
+                  <div class="input">
+                    <label for="horaProgramada">Hora Programada:</label>
+                    <input type="time" id="horaProgramada" name="horaProgramada">
+                  </div>
+                </div>
+              </div>
+              <div class="parte">
+                <h1>Dirección de Entrega</h1>
+                <div id="map"><img src="img/map.jpg" alt=""></div>
+                <input type="hidden" id="location" name="location" value="https://maps.app.goo.gl/e3pSrWqrjFMnHQ6L6">
+                <div class="input">
+                  <label for="direccionE">Dirección de Entrega:</label>
+                  <input required type="text" id="direccionE" name="direccionE">
+                </div>
+                <div class="input">
+                  <label for="aclaraciónD">Aclaración de dirección:</label>
+                  <input required class="inputMensaje" type="text" placeholder="Ejm: casa azul con puertas de madera"
+                    id="aclaraciónD" name="aclaraciónD">
+                </div>
+              </div>
+              <div class="parte">
+                <h1>Selecciona tu Sucursal</h1>
+                <label class="label-checkbox">
+                  <input class="input-checkbox sucursal" type="checkbox" id="sucursal1" name="sucursal1"
+                    value="sucursal1">
+                  <span>Sucursal1 Av.america</span>
+                </label>
+                <label class="label-checkbox">
+                  <input class="input-checkbox sucursal" type="checkbox" id="sucursal2" name="sucursal2"
+                    value="sucursal2">
+                  <span>Sucursal2 Av.Heroinas</span>
+                </label>
+                <label class="label-checkbox">
+                  <input class="input-checkbox sucursal" type="checkbox" id="sucursal3" name="sucursal3"
+                    value="sucursal3">
+                  <span>Sucursal3 Av.Tunupa</span>
+                </label>
+                <label class="label-checkbox">
+                  <input class="input-checkbox sucursal" type="checkbox" id="sucursal4" name="sucursal4"
+                    value="sucursal4">
+                  <span>Sucursal4 Av.Perú</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container_parte">
+              <div class="parte">
+                <h1>Mis Datos</h1>
+                <div class="input">
+                  <label for="nombres">Nombres:</label>
+                  <input required type="text" id="nombres" name="nombres">
+                </div>
+                <div class="input">
+                  <label for="apellidos">Apellidos:</label>
+                  <input required type="text" id="apellidos" name="apellidos">
+                </div>
+                <div class="input">
+                  <label for="correo">Correo Electrónico (opcional):</label>
+                  <input type="text" id="correo" name="correo">
+                </div>
+                <div class="input">
+                  <label for="celular">Número de Celular:</label>
+                  <input required type="number" id="celular" name="celular">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container_parte">
+              <div class="parte">
+                <h1>Método de Pago</h1>
+                <label class="label-checkbox">
+                  <input class="input-checkbox pago" type="checkbox" id="qr" name="qr" value="qr">
+                  <span>Qr</span>
+                </label>
+                <div id="qrContainer">
+                  <img id="qrImage" src="img/qr.jpg" alt="Código QR">
+                  <button type="button" id="scanButton">He escaneado el código QR</button>
+                  <div id="scannedStatus">Código QR escaneado correctamente.</div>
+                </div>
+                <label class="label-checkbox">
+                  <input class="input-checkbox pago" type="checkbox" id="efectivo" name="efectivo" value="efectivo">
+                  <span>Efectivo</span>
+                </label>
+                <p>En efectivo se cancela al repartidor.</p>
+              </div>
+              <div class="parte">
+                <h1>Resúmen de Orden</h1>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Cant.</th>
+                      <th>Producto</th>
+                      <th>Precio</th>
+                    </tr>
+                  </thead>
+                  <tbody id="pagoTabla">
+                    <tr>
+                      <td>
+                        <p class="campo_precio" id="pagoCant"></p>
+                      </td>
+                      <td>
+                        <p class="campo_precio" id="pagoProd"></p>
+                      </td>
+                      <td>
+                        <p class="campo_precio" id="pagoSubTotal"></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="resumenOrden_totales">
+                  <p>Descuento:</p><span id="pagoDescuento">0.00Bs.</span>
+                </div>
+                <div class="resumenOrden_totales">
+                  <p>Total:</p><span id="pagoTotal">112.00Bs.</span>
+                </div>
+                <div class="input">
+                  <label for="comentarioO">Cometario para la Orden:</label>
+                  <input class="inputMensaje" type="text" id="comentarioO" name="comentarioO">
+                </div>
+                <input type="hidden" id="tablaDatosInput" name="tablaDatos">
+                <input type="hidden" id="descuentoInput" name="descuento">
+                <input type="hidden" id="totalInput" name="total">
+                <button class="confirmar_pago_button" type="submit">Confirmar Pedido</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </dialog>
+  <!---------------- END PEDIDO Y ENTREGA ------------------->
+
+  <script src="js/cabecera.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/soloUnCheck.js"></script>
+  <script src="js/abrir_cerrar_carrito.js"></script>
+  <script src="js/programarEntregaOpciones.js"></script>
+  <script src="js/RecopilarCarritoParaTxt.js"></script>
+  <script src="js/validarFormPedido.js"></script>
+  <script src="js/pagoQr.js"></script>
+  <script src="js/animaciones.js"></script>
+  <script src="js/evitarReenvioForm.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="js/mySwiper.js" defer></script>
+
+</body>
+
+</html>

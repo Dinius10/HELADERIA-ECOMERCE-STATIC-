@@ -1,0 +1,32 @@
+
+    -------------------------------------------------------------------
+    PEDIDO:
+
+    6 x, HELADO DULCE DE LECHE, 299.40Bs.
+    1 x, HELADO CHOCOLATE, 45.90Bs.
+
+    ..........................
+    DESCUENTO: - 0.00Bs.
+    TOTAL: 345.30Bs.
+
+
+    -------------------------------------------------------------------
+    Forma de Entrega: Delivery
+    -------------------------------------------------------------------
+    Recibir la Orden: Ahora mismo (2024-08-23 14:14:11)
+    -------------------------------------------------------------------
+    Link Maps de Entrega:https://maps.app.goo.gl/e3pSrWqrjFMnHQ6L6
+    Dirección de Entrega: Erfundene Straße 33
+    Aclaración de Dirección: Erfundene Straße 33
+    -------------------------------------------------------------------
+    Sucursal: Sucursal2 Av.Heroinas
+    -------------------------------------------------------------------
+    Nombres: Gottfried
+    Apellidos: Leibniz
+    Correo Electrónico: test@beispiel.de
+    Número de Celular: 5464654
+    -------------------------------------------------------------------
+    Método de Pago: Efectivo
+    -------------------------------------------------------------------
+    Comentario para la Orden: 
+    -------------------------------------------------------------------

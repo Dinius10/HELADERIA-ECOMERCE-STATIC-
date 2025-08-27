@@ -1,0 +1,175 @@
+.contenido {
+  background-color: #F5EEE6;
+  width: 100vw;
+  height: 77vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  overflow-y: auto;
+}
+
+.info {
+  width: 40%;
+  max-width: 500px;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  color: #E6A4B4;
+}
+
+.title {
+  background-image: url('../img/derretido.png');
+  background-size: 100% 100%;
+  ;
+  /* La imagen de fondo cubrirá todo el contenedor */
+  background-repeat: no-repeat;
+  /* Para evitar la repetición */
+}
+
+.title p {
+  margin-top: 25%;
+  text-align: center;
+  font-family: "Libre Bodoni", serif;
+  font-size: 2rem;
+}
+
+.description {
+  text-align: justify;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.price {
+  text-align: right;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.price button {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 1px solid #E6A4B4;
+  color: #E6A4B4;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+/*---IMAGENES HELADOS SWYPER----*/
+
+.imagen_helado {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  gap: 30px;
+}
+
+
+/*SWIPER STILOS*/
+.mySwiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #E6A4B4;
+  border: #E6A4B4;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #ecf0f1;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  filter: blur(2px);
+  transform: scale(0.5);
+}
+
+/*.swiper-slide-active{}*/
+
+.imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen img {
+  height: 100%;
+}
+
+
+/*----------------------- RESPONSIVE TABLET-----------------------*/
+@media only screen and (max-width: 1025px) {
+  .contenido {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .info {
+    width: 350px;
+    height: 45%;
+    gap: 10px;
+  }
+
+  .imagen_helado {
+    width: 100%;
+    height: 55%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imagen {
+    height: 100%;
+  }
+  .imagen img{
+    height: 70%;
+  }
+
+}
+
+/*----------------------- RESPONSIVE MOBILE-----------------------*/
+@media only screen and (max-width: 450px) {
+  .info {
+    width: 75vw;
+    height: 50%;
+    gap: 10px;
+  }
+
+  .title p {
+    font-size: 1.5rem;
+  }
+  .description p {
+    font-size: 10px;
+  }
+
+  .imagen_helado {
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+  .imagen {
+    height: 100%;
+  }
+  .imagen img{
+    height: 45%;
+  }
+  .mySwiper {
+    width: 300px;
+    z-index: 999;
+  }
+  
+}

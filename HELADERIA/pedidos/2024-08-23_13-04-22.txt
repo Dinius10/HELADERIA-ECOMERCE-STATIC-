@@ -1,0 +1,31 @@
+
+    -------------------------------------------------------------------
+    PEDIDO:
+
+    1 x, HELADO DULCE DE LECHE, 49.90Bs.
+
+    ..........................
+    DESCUENTO: - 0.00Bs.
+    TOTAL: 49.90Bs.
+
+
+    -------------------------------------------------------------------
+    Forma de Entrega: Delivery
+    -------------------------------------------------------------------
+    Recibir la Orden: Ahora mismo (2024-08-23 13:04:22)
+    -------------------------------------------------------------------
+    Link Maps de Entrega:https://maps.app.goo.gl/e3pSrWqrjFMnHQ6L6
+    Dirección de Entrega: 23 de enero y ayoreo
+    Aclaración de Dirección: Garaje negro 
+    -------------------------------------------------------------------
+    Sucursal: Sucursal3 Av.Tunupa
+    -------------------------------------------------------------------
+    Nombres: Gisela Morelia 
+    Apellidos: Suárez Orozco 
+    Correo Electrónico: 
+    Número de Celular: 70641233
+    -------------------------------------------------------------------
+    Método de Pago: QR
+    -------------------------------------------------------------------
+    Comentario para la Orden: Más toppings porfavor 
+    -------------------------------------------------------------------
